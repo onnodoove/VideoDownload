@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Laatste binaries van youtube-dl binnenhalen
-zenity --info --no-wrap --text="youtube-dl opwaarderen naar laatste versie"
-Passwordstring=$((zenity --password) 1>&1)
-echo $Passwordstring | sudo -S apt upgrade -y youtube-dl
-
 # Link ophalen en in variabele DownLoadLink voegen
 DownLoadLink=$((zenity --entry --text="Plak hier de link naar de video" --entry-text="") 1>&1)
 

@@ -2,7 +2,7 @@
 
 listchoice=$(zenity --list --title="Youtube" --column="Maak een keuze" "Youtube-Download" "Video-playback" "Play-all" 1>&1)
 if [ $listchoice == "Youtube-Download" ]; then
-	gnome-terminal --command="./Videodownload.sh"
+	gnome-terminal --window --full-screen -- ./Videodownload.sh
 else 
 	if [ $listchoice == "Video-playback" ]; then
 		./VideoPlayback.sh
