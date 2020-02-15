@@ -12,7 +12,7 @@ else
 			cvlc -f --random /home/onno/Presentaties/*
 		else
 			if [ $listchoice == "Van-video-naar-muziek" ]; then
-				./ConvertToAudio.sh
+				gnome-terminal --window --full-screen -- ./ConvertToAudio.sh
 			else
 				if [ $listchoice == "Video-verwijderen" ]; then
 					./RemoveVideo.sh
